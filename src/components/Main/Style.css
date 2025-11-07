@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px 150px;
+
+  .text-h1 {
+    font-weight: 700;
+    color: blue;
+  }
+
+  .paragraph-h1 {
+    flex-wrap: wrap;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid blue;
+  border-radius: 10px;
+  height: 220px;
+  margin: 150px;
+  background-color: white;
+
+  .background-image {
+    height: 213px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      margin-bottom: 45%;
+      border: 2px solid blue;
+      border-radius: 30px;
+    }
+  }
+
+  .paragraph-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+  }
+}
