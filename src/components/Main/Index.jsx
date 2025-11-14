@@ -1,5 +1,5 @@
 import "./style.css";
-import { CareerCard } from "./CareerCard";
+import { CareerCard } from "../CareerCard";
 
 export const Main = () => {
   return (

@@ -5,6 +5,7 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* CONTAINER GERAL DO MAPA */
 .careerMap {
   display: flex;
   flex-direction: column;
@@ -12,88 +13,340 @@
   border-radius: 10px;
   box-shadow: 4px 4px 5px black;
   padding: 20px;
-  gap: 30px;
-  margin: 80px 110px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
 
-  .text-mapCareer {
+  /* CONTAINER GERAL DO MAPA */
+  .careerMap {
     display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px black;
+    padding: 20px;
+    gap: 30px;
+    margin: 80px 110px;
+  }
+
+  /* TÍTULO */
+  .text-mapCareer {
     text-align: center;
-    justify-content: center;
     margin-bottom: 55px;
   }
 
+  /* --- CARD INDIVIDUAL --- */
   .position {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  /* COLUNA: INFO DO CARGO */
+  .info-job {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+  }
+
+  /* SOFT SKILLS */
+  .softs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 20px;
+    min-width: 180px;
+  }
+
+  .h3-softs {
+    color: blue;
+  }
+
+  /* ROADMAP */
+  .roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-h3-roadmap {
+    color: brown;
+  }
+
+  .doubles {
+    display: flex;
+    gap: 10px;
+  }
+
+  .first,
+  .second {
+    padding: 10px;
+    border: 2px solid brown;
+    border-radius: 10px;
+  }
+
+  .first:hover,
+  .second:hover {
+    border: 3px solid gold;
+  }
+
+  /* ============================= */
+  /* --- TABLET (de 950px pra baixo) --- */
+  @media (max-width: 950px) {
+    .careerMap {
+      margin: 40px 40px;
+      padding: 20px;
+    }
+
+    .position {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
 
     .info-job {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 600px;
+      width: 100%;
     }
 
     .softs {
-      display: flex;
+      width: 80%;
+    }
+
+    .doubles {
       justify-content: center;
-      align-items: center;
-      margin-bottom: 100px;
-      flex-direction: column;
-      border: 1px solid blue;
-      border-radius: 20px;
+    }
+  }
+
+  /* --- CELULARES MÉDIOS (até 800px) --- */
+  @media (max-width: 800px) {
+    .careerMap {
+      margin: 30px 20px;
       padding: 15px;
-      gap: 20px;
-
-      .h3-softs {
-        color: blue;
-      }
     }
 
-    .roadmap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+    .info-job h2 {
+      font-size: 1.2rem;
+    }
+
+    .first,
+    .second {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+
+    .softs {
+      width: 100%;
+    }
+
+    .doubles {
       flex-direction: column;
+      gap: 10px;
+    }
+  }
 
-      .doubles {
-        display: flex;
-        gap: 10px;
-        justify-content: space-between;
-
-        .first {
-          padding: 10px;
-          border: 2px solid brown;
-          border-radius: 10px;
-        }
-
-        .second {
-          padding: 10px;
-          border: 2px solid brown;
-          border-radius: 10px;
-        }
-      }
-
-      .text-h3-roadmap {
-        color: brown;
-      }
+  /* --- CELULARES PEQUENOS (iPhone 12/13/14, Androids) --- */
+  @media (max-width: 480px) {
+    .careerMap {
+      margin: 20px 10px;
+      padding: 12px;
+      gap: 20px;
     }
 
-    .roadmap {
-      .first:hover {
-        padding: 10px;
-        border: 3px solid gold;
-        border-radius: 10px;
-      }
-
-      .second:hover {
-        padding: 10px;
-        border: 3px solid gold;
-        border-radius: 10px;
-      }
+    .position {
+      padding: 10px;
     }
+
+    .info-job {
+      gap: 10px;
+    }
+
+    .info-job h2 {
+      font-size: 1.1rem;
+    }
+
+    .description-job {
+      font-size: 0.95rem;
+    }
+
+    .softs {
+      padding: 12px;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .softs ul li {
+      font-size: 0.9rem;
+    }
+
+    .text-h3-roadmap {
+      font-size: 1rem;
+    }
+
+    .doubles {
+      width: 100%;
+    }
+
+    .first,
+    .second {
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+  }
+
+  /* --- CELULARES MUITO PEQUENOS (iPhone SE / 360px) --- */
+  @media (max-width: 360px) {
+    .careerMap {
+      margin: 15px 5px;
+      padding: 10px;
+    }
+
+    .info-job h2 {
+      font-size: 1rem;
+    }
+
+    .description-job {
+      font-size: 0.85rem;
+    }
+
+    .first,
+    .second {
+      font-size: 0.8rem;
+      padding: 7px;
+    }
+  }
+
+  gap: 30px;
+  margin: 80px 110px;
+}
+
+/* TÍTULO */
+.text-mapCareer {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+/* --- CARD INDIVIDUAL --- */
+.position {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* COLUNA: INFO DO CARGO */
+.info-job {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+}
+
+/* SOFT SKILLS */
+.softs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 20px;
+  padding: 15px;
+  gap: 20px;
+  min-width: 180px;
+}
+
+.h3-softs {
+  color: blue;
+}
+
+/* ROADMAP */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-h3-roadmap {
+  color: brown;
+}
+
+.doubles {
+  display: flex;
+  gap: 10px;
+}
+
+.first,
+.second {
+  padding: 10px;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+
+.first:hover,
+.second:hover {
+  border: 3px solid gold;
+}
+
+/* ============================= */
+/* --- TABLET --- */
+@media (max-width: 950px) {
+  .position {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .info-job {
+    width: 100%;
+  }
+
+  .softs {
+    width: 80%;
+  }
+
+  .doubles {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .careerMap {
+    margin: 40px 20px;
+    padding: 15px;
+  }
+
+  .info-job h2 {
+    font-size: 1.2rem;
+  }
+
+  .first,
+  .second {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .softs {
+    width: 100%;
+  }
+
+  .doubles {
+    flex-direction: column;
+    gap: 10px;
   }
 }

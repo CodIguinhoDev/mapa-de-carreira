@@ -10,17 +10,42 @@
   flex-direction: column;
   gap: 40px;
   margin: 50px 150px;
+}
 
-  .text-h1 {
-    font-weight: 700;
-    color: blue;
+.text-h1 {
+  font-weight: 700;
+  color: blue;
+}
+
+.paragraph-h1 {
+  text-align: justify;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .about-me {
+    margin: 40px 40px;
   }
 
   .paragraph-h1 {
-    flex-wrap: wrap;
-    text-align: justify;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.3;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-me {
+    margin: 30px 20px;
+    gap: 25px;
+  }
+
+  .text-h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .paragraph-h1 {
+    font-size: 18px;
   }
 }
